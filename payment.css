@@ -1,0 +1,118 @@
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        background: url('b_4.gif') no-repeat center center fixed;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .login-container {
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        border: 6px dashed #FF4500; /* Red color */
+        border-radius: 25px;
+        width: 90%;
+        max-width: 420px;
+        text-align: center;
+        animation: float 4s ease-in-out infinite, fadeIn 1s ease forwards;
+        box-shadow: 0 10px 25px rgba(204, 83, 39, 0.5); /* Red shadow */
+    }
+
+    h2 {
+        font-size: 28px;
+        color: #00BFFF; /* Sky Blue color */
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 0 #fff0f5;
+    }
+
+    label {
+        display: block;
+        text-align: left;
+        color: #333;
+        font-weight: bold;
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 3px solid #00BFFF; /* Sky Blue border */
+        border-radius: 12px;
+        font-size: 15px;
+        background-color: #e0ffff; /* Light Sky Blue background */
+        box-shadow: inset 0 1px 4px rgba(0, 191, 255, 0.2); /* Sky Blue shadow */
+        transition: all 0.3s ease;
+    }
+
+    input:focus, select:focus {
+        border-color: #FF4500; /* Red border on focus */
+        outline: none;
+        background-color: #ffe6e6; /* Light Red background */
+        box-shadow: 0 0 8px rgba(255, 69, 0, 0.4); /* Red shadow */
+    }
+
+    button {
+        background: #00BFFF; /* Sky Blue button */
+        color: white;
+        border: none;
+        padding: 12px;
+        width: 100%;
+        font-size: 16px;
+        border-radius: 15px;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0, 191, 255, 0.4); /* Sky Blue shadow */
+        transition: all 0.3s ease;
+    }
+
+    button:hover {
+        background: #00BFFF; /* Same sky blue on hover */
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(0, 191, 255, 0.6); /* Darker shadow on hover */
+    }
+
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-8px);
+        }
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            transform: scale(0.9);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    @media (max-width: 480px) {
+        .login-container {
+            padding: 15px;
+        }
+
+        h2 {
+            font-size: 22px;
+        }
+
+        label, input, button {
+            font-size: 14px;
+        }
+    }

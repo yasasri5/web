@@ -1,0 +1,88 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url("wall.gif") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 25px rgba(255, 105, 180, 0.3); /* Pink glow */
+    text-align: center;
+    width: 360px;
+    max-width: 90%;
+    border: 4px dashed #FF69B4; /* Hot Pink */
+}
+
+h2 {
+    color: #ff1493; /* Deep Pink */
+    font-size: 30px;
+    text-shadow: 1px 1px 3px rgba(255, 182, 193, 0.8); /* Light Pink */
+    margin-bottom: 25px;
+}
+
+input {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #ffa07a; /* Light Salmon */
+    border-radius: 12px;
+    font-size: 16px;
+    background-color: #fff0f5; /* Lavender Blush */
+    color: #d63384; /* Warm Purple */
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #32cd32; /* Lime Green */
+    box-shadow: 0 0 10px rgba(50, 205, 50, 0.6);
+}
+
+button {
+    background: linear-gradient(45deg, #32cd32, #ffa07a); /* Lime Green to Light Salmon */
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.4s ease;
+    margin-top: 15px;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #ffa07a, #32cd32); /* Light Salmon to Lime Green */
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 182, 193, 0.4); /* Soft pink glow */
+}
+
+.signup-link {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #d63384; /* Warm Purple */
+}
+
+.signup-link a {
+    color: #ff1493; /* Deep Pink */
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.signup-link a:hover {
+    color: #32cd32; /* Lime Green */
+}
+
+.message {
+    color: #d63384; /* Warm Purple */
+    font-weight: bold;
+}

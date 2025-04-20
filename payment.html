@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment - Yoksha</title>
+    <link rel="stylesheet" href="payment.css">
+    <script defer>
+        function playAudio(field) {
+            let audio;
+            switch (field) {
+                case 'name': audio = new Audio('name.mp3'); break;
+                case 'card_number': audio = new Audio('card_number.mp3'); break;
+                case 'expiry': audio = new Audio('Expiration Date.mp3'); break;
+                case 'cvv': audio = new Audio('cvv.mp3'); break;
+                case 'amount': audio = new Audio('plan.mp3'); break;
+                default: return;
+            }
+            audio.play();
+        }
+    </script>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Complete Payment</h2>
+        <form action="payment.php" method="POST" id="paymentForm">
+            <label for="cardholder_name">Cardholder Name:</label>
+            <input type="text" id="cardholder_name" name="name" onclick="playAudio('name')" required>
+
+            <label for="card_number">Card Number:</label>
+            <input type="text" id="card_number" name="card_number" pattern="\d{16}" onclick="playAudio('card_number')" required>
+
+            <label for="expiration_date">Expiration Date (MM/YY):</label>
+            <input type="text" id="expiration_date" name="expiry" pattern="\d{2}/\d{2}" onclick="playAudio('expiry')" required>
+
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" pattern="\d{3}" onclick="playAudio('cvv')" required>
+
+            <label for="amount">Select Plan:</label>
+            <select id="amount" name="amount" onclick="playAudio('amount')" required>
+                <option value="">--Select Plan--</option>
+                <option value="200">₹200 - Basic</option>
+                <option value="500">₹500 - Premier</option>
+                <option value="750">₹750 - Ultra</option>
+            </select>
+
+            <button type="submit">Pay Now</button>
+        </form>
+    </div>
+</body>
+</html>

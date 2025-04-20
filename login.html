@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Yoksha</title>
+    <link rel="stylesheet" href="login.css">
+    <script defer>
+        function playAudio(field) {
+            let audio;
+            switch (field) {
+                case 'email': audio = new Audio('email.mp3'); break;
+                case 'password': audio = new Audio('password.mp3'); break;
+                default: return;
+            }
+            audio.play();
+        }
+    </script>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Yoksha Kids All In One</h2>
+        <form action="login.php" method="POST">
+            <input type="email" name="email" placeholder="Email" onclick="playAudio('email')" required>
+            <input type="password" name="password" placeholder="Password" onclick="playAudio('password')" required>
+            <button type="submit">Log In</button>
+        </form>
+        <p class="signup-link">Don't have an account? <a href="signup.html">Sign up here</a></p>
+    </div>
+</body>
+</html>
